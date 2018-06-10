@@ -1,0 +1,20 @@
+npm install express-generator -g
+express express-locallibrary-tutorial --view=ejs
+SET DEBUG=express-locallibrary-tutorial:* & npm start // windows(to run application)
+DEBUG=express-locallibrary-tutorial:* npm start // mac/linus(to run application)
+npm install --save-dev nodemon
+
+//package.json
+
+"scripts": {
+    "start": "node ./bin/www",
+    "devstart": "nodemon ./bin/www"
+  },
+
+  SET DEBUG=express-locallibrary-tutorial:* & npm run devstart // windows(to run application)
+  DEBUG=express-locallibrary-tutorial:* npm run devstart // mac/linus(to run application)
+
+  npm install mongoose
+  
+  npm install async
+  node populatedb <your mongodb url>​​​​
