@@ -1,0 +1,25 @@
+
+    <h1><%= title %> : <%= book.title %></h1>
+    <p><strong>Author:  <a href='<%= book.author.url%>'> <%= book.author.name%></a></strong></p>
+    <p><strong>Summary:  <%= book.summary %></strong></p>
+    <p><strong>ISBN:  <%= book.isbn %></strong></p>
+    <p><strong>Genre:  <%= book.summary %></strong></p>
+    p #[strong Summary:] #{book.summary}
+    p #[strong ISBN:] #{book.isbn}
+    p #[strong Genre:]&nbsp;
+    <% book.genre.forEach(function(books)
+      { %>
+       <a href='<%= val.url %> >#{val.name}
+    <div style='margin-left:20px;margin-top:20px'>
+      <h4> Books</h4>
+      <dl>
+      <% genre_books.forEach(function(books)
+      { %>
+        <dt><a href='<%= books.url %>'> <%= books.title %></a></dt>
+        <dd><%= books.summary%></dd>
+      <% }) %>
+      </dl>
+      <% if (genre_books.length==0) { %>
+        <p> The genre has no books.</p>
+      <% } %>
+      </div>
